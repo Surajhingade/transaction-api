@@ -7,7 +7,7 @@ const categoryAdd = require("./routes/categoryAdd");
 const pftData = require("./routes/pftData")
 
 dotenv.config();
-
+const PORT = process.env.PORT || 5000
 mongoose.connect(process.env.URL).then(()=>{
     console.log("database connected");
 }).catch((err)=>console.log(err));
@@ -20,6 +20,6 @@ app.use(express.json());
 app.use("/api/transaction",pftData);
 app.use("/api/category",categoryAdd)
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(PORT,() => {
     console.log("Backend server is running!");
   });
