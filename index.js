@@ -20,6 +20,6 @@ app.use(express.json());
 app.use("/api/transaction",pftData);
 app.use("/api/category",categoryAdd)
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log("Backend server is running!");
   });
