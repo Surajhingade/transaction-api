@@ -16,7 +16,9 @@ app.use(cors());
 app.use(express.json());
 
 // routes fro the add transaction and category and type
- 
+ app.get("/",(req,res)=>{
+    res.send("Server is running")
+ })
 app.use("/api/transaction",pftData);
 app.use("/api/category",categoryAdd)
 
